@@ -183,7 +183,7 @@ add_library(kimera_vio::kimera_vio ALIAS kimera_vio)
 add_executable(stereoVIOEuroc ./examples/KimeraVIO.cpp)
 target_link_libraries(stereoVIOEuroc PUBLIC kimera_vio::kimera_vio)
 
-############################### TESTS ##########################################
+#[[############################### TESTS ##########################################
 ### Add testing
 option(KIMERA_BUILD_TESTS "Build tests" ON)
 if(KIMERA_BUILD_TESTS)
@@ -280,7 +280,7 @@ if(KIMERA_BUILD_TESTS)
     include(GoogleTest)
     gtest_discover_tests(testKimeraVIO)
   endif()
-endif(KIMERA_BUILD_TESTS)
+endif(KIMERA_BUILD_TESTS)]]
 
 ############################### INSTALL/EXPORT #################################
 ## We install the export that we defined above
