@@ -122,7 +122,8 @@ RUN apt-get update && apt-get install -y libgflags2.2 libgflags-dev libgoogle-gl
 
 # Install Kimera-VIO
 RUN git clone https://github.com/MIT-SPARK/Kimera-VIO.git
-RUN cd Kimera-VIO && mkdir build && cd build && cmake .. && make -j$(nproc)
+RUN cd Kimera-VIO && mkdir build && cd build && cmake .. && make 
+#-j$(nproc)
 
 # Download and extract EuRoC dataset.
 RUN apt-get update && apt-get install -y wget
